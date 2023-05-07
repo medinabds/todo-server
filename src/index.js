@@ -29,10 +29,14 @@ app.use(express.urlencoded({
     extended: true
 }));
 
-const port = 3000;
+const port = 5000;
 
 app.get('/', (req, res) => {
-    res.send('Hello World')
+   const returnData = {
+        msg : "Welcome todo server"  
+   }
+   
+    res.send(returnData);
 });
 
 app.post('/todo', (req, res) => {
